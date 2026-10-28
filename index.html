@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forge Studio — Infinite Marquee (pauses on hover)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <section class="intro">
+      <h1>Infinite auto-scrolling marquee</h1>
+      <p>Two seamless, continuously-scrolling rows (opposite directions). Hover any row to pause it.
+         The loop has no visible jump — the track content is duplicated and animated to exactly
+         <code>-50%</code>, so the copy lands precisely where the original began.</p>
+    </section>
+
+    <!-- Row 1: logos, scrolling left -->
+    <div class="marquee" aria-label="Partner logos">
+      <div class="marquee-track">
+        <!-- data-marquee-content is the unit that gets duplicated by JS -->
+        <ul class="marquee-group" data-marquee-content>
+          <li class="chip">◆ Northwind</li>
+          <li class="chip">▲ Lumen Labs</li>
+          <li class="chip">● Cobalt</li>
+          <li class="chip">✦ Meridian</li>
+          <li class="chip">◇ Harbor</li>
+          <li class="chip">◼ Ironclad</li>
+          <li class="chip">⬡ Vertex</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Row 2: testimonials, scrolling right, slower -->
+    <div class="marquee reverse slow" aria-label="Testimonials">
+      <div class="marquee-track">
+        <ul class="marquee-group" data-marquee-content>
+          <li class="quote">“Shipped our rebrand in 3 weeks.” — <b>A. Rao</b></li>
+          <li class="quote">“The motion actually explains the UI.” — <b>J. Kim</b></li>
+          <li class="quote">“Fastest site we’ve ever launched.” — <b>M. Silva</b></li>
+          <li class="quote">“No fluff, just results.” — <b>P. Novak</b></li>
+          <li class="quote">“They sweat the details.” — <b>L. Chen</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="status" id="status">status: initializing…</p>
+  </main>
+
+  <script src="marquee.js"></script>
+</body>
+</html>
